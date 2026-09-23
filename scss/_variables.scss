@@ -9,9 +9,9 @@ $faded_rose: #b0907a;
 // background
 $alabaster: #e1d4c9;
 $taupe: #665f55;
-$old-black: #292826;
-$dark-charcoal: #403f3d;
-$exremely-dark: #292826;
+$dark-charcoal: rgba(64, 63, 61, 0.8);
+$exremely-dark: rgba(41, 40, 38, 0.8);
+$onyx: #292826;
 
 // border
 $bone: #c1b6ad;
@@ -23,22 +23,22 @@ $granite_gray: #665f55;
   --text-accent: #{$faded_rose};
 
   --bg-page: #{$alabaster};
-  --bg-container: #{$white-pure};
-  --bg-overlay: #{rgba($overlay-light, 0.8)};
+  --bg-container: #{$taupe};
+  --bg-overlay: #{$dark-charcoal};
 
   --border-primary: #{$bone};
   --border-inverse: #{$granite_gray};
 }
 
 html.dark-theme {
-  --text-primary: #{$champagne-rose};
-  --text-inverse: #{$champagne-rose};
+  --text-primary: #{$alabaster};
+  --text-inverse: #{$alabaster};
   --text-accent: #{$faded_rose};
 
-  --bg-page: #{$old-black};
-  --bg-container: #{$dark-charcoal};
-  --bg-overlay: #{rgba($old-black, 0.8)};
+  --bg-page: #{$onyx};
+  --bg-container: #{$charcoal};
+  --bg-overlay: #{($exremely-dark)};
 
-  --border-primary: #{$granite_gray};
+  --border-primary: #{$taupe};
   --border-inverse: #{$bone};
 }
