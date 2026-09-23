@@ -1,0 +1,41 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+.container {
+  @include min-max(320px, 100%);
+}
+
+.wrap {
+  @include min-max(320px, 1440px);
+  width: 100%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Inter Display", sans-serif;
+  font-weight: 600;
+}
+
+p,
+span,
+a {
+  color: $white;
+}
+
+a {
+  text-decoration: none;
+}
