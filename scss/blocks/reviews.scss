@@ -1,0 +1,43 @@
+.reviews {
+  padding: 6.25rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &-paragraph {
+      font-weight: 600;
+      font-size: 3.75rem;
+      line-height: 125%;
+      color: var(--text-primary);
+
+      span {
+        font-style: italic;
+        color: var(--text-accent);
+      }
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: row;
+    gap:2.5rem;
+
+    &-left,
+    &-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+    }
+
+  }
+
+  &__customer-img {
+    border-radius: 1.25rem;
+    max-width: 41.25rem;
+    width: 100%;
+    height: auto;
+  }
+}
