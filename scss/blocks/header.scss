@@ -1,0 +1,90 @@
+.header {
+  padding: 1.25rem, 0, 0.313rem, 0;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__nav-container {
+      display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__logo-img {
+    width: 6.25rem;
+    height: auto;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+
+    &-item {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--text-primary);
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    background: none;
+    border: 0.063rem solid var(--border-primary);
+    border-radius: 6.25rem;
+    padding: 0.25rem;
+  }
+
+  &__togle-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__togle-dark {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  &__button-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 150%;
+    color: var(--text-primary);
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      padding-bottom: 0.25rem;
+
+    }
+  }
+}
