@@ -1,0 +1,102 @@
+.assortment {
+  padding: 3.125rem 0 3.125rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    &-title {
+      font-weight: 600;
+      font-size: 3.75rem;
+      line-height: 125%;
+      text-align: center;
+      color: var(--text-primary);
+
+      span {
+        font-style: italic;
+        color: var(--text-accent);
+      }
+    }
+  }
+
+  &__main {
+    padding: 0 6.5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      align-items: center;
+      justify-content: center;
+      max-width: 30rem;
+      width: 100%;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      color: var(--text-primary);
+
+      h3,
+      h4 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 125%;
+        text-align: center;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+    right: 1.5rem;
+
+    &-button {
+      border: 0.063rem solid var(--bg-container);
+      background: none;
+      border-radius: 6.25rem;
+      width: 3.75rem;
+      height: 3.75rem;
+    }
+  }
+
+  &__progress-bar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  &__progress-item {
+    width: 2.5rem;
+    height: 0.25rem;
+  }
+
+  &__progress-chousen {
+    border-radius: 6.25rem;
+    background-color: var(--bg-container);
+  }
+
+  &__progress-next {
+    border-radius: 6.25rem;
+    background-color: var(--border-primary);
+  }
+}
