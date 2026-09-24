@@ -1,6 +1,7 @@
 body {
   --font-family: "Inter", sans-serif;
   --second-family: "Manrope", sans-serif;
+  background: var(--text-inverse);
 }
 
 html {
@@ -34,9 +35,11 @@ h3 {
 p,
 span,
 a {
-  color: $white;
+  font-family: var(--font-family);
 }
 
-a {
+a,
+button {
   text-decoration: none;
+  cursor: pointer;
 }
