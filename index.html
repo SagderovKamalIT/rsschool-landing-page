@@ -67,12 +67,12 @@
             <div class="header__button-item">
 
               <a class="header__button-menu" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
-                
-                 <p>
 
-                    Menu
+                <p>
 
-                  </p>
+                  Menu
+
+                </p>
                 <img src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg" alt="coffee_cup-icon" />
               </a>
 
@@ -80,9 +80,73 @@
 
             </div>
 
+            <button class="header__burger js-burger">
+
+              <svg class="header__burger-icon  header__burger-icon--default" width="18" height="10" viewBox="0 0 18 10"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 0.75H16.75" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M0.75 8.75H16.75" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+              <svg class="header__burger-icon  header__burger-icon--active" width="13" height="13" viewBox="0 0 13 13"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 0.75L12.0637 12.0637" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M0.75 12.0637L12.0637 0.749998" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+            </button>
+
+
+
 
           </div>
 
+
+
+        </div>
+      </div>
+
+
+      <div class="burger">
+
+        <div class="burger__content">
+
+          <nav class="burger__nav">
+
+            <a href="#favourite_coffee" class="burger__nav-item  js-burger__nav ">
+              Favorite coffee
+              <span class="header__nav-line"></span>
+            </a>
+
+            <a href="#about" class="burger__nav-item  js-burger__nav">
+              About
+              <span class="header__nav-line"></span>
+            </a>
+
+            <a href="#mobile-app" class="burger__nav-item  js-burger__nav">
+              Mobile app
+              <span class="header__nav-line"></span>
+            </a>
+
+            <a href="#contact-us" class="burger__nav-item  js-burger__nav">
+              Contact us
+              <span class="header__nav-line"></span>
+            </a>
+
+          </nav>
+
+          <a class="burger__button js-burger__nav" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
+
+
+            Menu
+
+            <img class="burger__button-menu" src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg"
+              alt="coffee_cup-icon" />
+          </a>
 
         </div>
       </div>
@@ -429,6 +493,8 @@
 
   </main>
   </div>
+
+  <script src="./js/burger.js"></script>
 </body>
 
 </html>
