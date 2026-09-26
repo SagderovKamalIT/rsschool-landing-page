@@ -25,11 +25,25 @@
           <div class="header__nav-container">
 
             <nav class="header__nav">
-              <a src="#" class="header__nav-item"> Favorite coffee </a>
+              <a href="#favourite_coffee" class="header__nav-item">
+                Favorite coffee
+                <span class="header__nav-line"></span>
+              </a>
 
-              <a src="#" class="header__nav-item"> Mobile app </a>
+              <a href="#about" class="header__nav-item">
+                About
+                <span class="header__nav-line"></span>
+              </a>
 
-              <a src="#" class="header__nav-item"> Contact us </a>
+              <a href="#mobile-app" class="header__nav-item">
+                Mobile app
+                <span class="header__nav-line"></span>
+              </a>
+
+              <a href="#contact-us" class="header__nav-item">
+                Contact us
+                <span class="header__nav-line"></span>
+              </a>
             </nav>
           </div>
 
@@ -50,11 +64,22 @@
 
             </button>
 
-            <a class="header__button-menu">
-              Menu
-              <img src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg" alt="coffee_cup-icon" />
+            <div class="header__button-item">
 
-            </a>
+              <a class="header__button-menu" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
+                
+                 <p>
+
+                    Menu
+
+                  </p>
+                <img src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg" alt="coffee_cup-icon" />
+              </a>
+
+              <span class="header__button-line"></span>
+
+            </div>
+
 
           </div>
 
@@ -86,8 +111,10 @@
                 beverage.
               </p>
 
-              <a class="main__text-button">
+              <a class="main__text-button" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
                 Menu
+                <span>
+                </span>
               </a>
 
             </div>
@@ -100,7 +127,7 @@
 
     </section>
 
-    <section class="assortment">
+    <section class="assortment" id="favourite_coffee">
 
       <div class="wrap">
 
@@ -139,21 +166,11 @@
 
             <div class="assortment__toggle">
 
-              <button class="assortment__toggle-button">
-
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18.5 12H6M12 18L6 12L12 6" stroke="#403F3D" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <button class="assortment__toggle-button assortment__toggle-left">
 
               </button>
 
-              <button class="assortment__toggle-button">
-
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="#403F3D" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
+              <button class="assortment__toggle-button  assortment__toggle-right">
 
               </button>
 
@@ -178,7 +195,7 @@
     </section>
 
 
-    <section class="reviews">
+    <section class="reviews" id="about">
 
       <div class="wrap">
 
@@ -219,7 +236,7 @@
 
     </section>
 
-    <section class="app">
+    <section class="app" id="mobile-app">
       <div class="wrap">
 
         <div class="app__container">
@@ -236,9 +253,10 @@
 
             <div class="app__text-buttons">
 
-              <a class="app__text-button">
+              <a class="app__text-button" href="https://www.apple.com/app-store/" target="_blank"
+                rel="noopener noreferrer">
 
-                <img class="app__text-icon" src="./assets/isons/app-section/apple-store_icon.svg" alt="app store" />
+                <span class="app__text-icon app__text-apple"></span>
 
                 <div class="app__text-container">
 
@@ -254,9 +272,10 @@
 
               </a>
 
-              <a class="app__text-button">
+              <a class="app__text-button" href="https://play.google.com/store/apps?hl=ru&pli=1" target="_blank"
+                rel="noopener noreferrer">
 
-                <img class="app__text-icon" src="./assets/isons/app-section/google-store_icon.svg" alt="google store" />
+                <span class="app__text-icon app__text-google"> </span>
 
                 <div class="app__text-container">
 
@@ -291,7 +310,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contact-us">
 
       <div class="wrap">
 
@@ -305,21 +324,20 @@
 
             <div class="footer__link-container">
 
-              <a href="#" class="footer__link-icon" target="_blank" rel="noopener noreferrer">
+              <a href="#" class="footer__link-icon footer__link-twiter" target="_blank" rel="noopener noreferrer">
 
-                <img src="./assets/isons/footer/twitter.svg" alt="twiter icon" />
 
-              </a>
-
-              <a href="#" class="footer__link-icon" target="_blank" rel="noopener noreferrer">
-
-                <img src="./assets/isons/footer/instagram.svg" alt="twiter icon" />
 
               </a>
 
-              <a href="#" class="footer__link-icon" target="_blank" rel="noopener noreferrer">
+              <a href="#" class="footer__link-icon footer__link-instagram" target="_blank" rel="noopener noreferrer">
 
-                <img src="./assets/isons/footer/facebook.svg" alt="twiter icon" />
+
+              </a>
+
+              <a href="#" class="footer__link-icon footer__link-facebook" target="_blank" rel="noopener noreferrer">
+
+
 
               </a>
 
@@ -340,35 +358,62 @@
 
               <li class="footer__adress-item">
 
-                <img src="./assets/isons/footer/adress.svg" alt="adress icon" />
-                <a href="https://share.google/Yy7kmquYp72K2r7OA" target="_blank" rel="noopener noreferrer" >
+                <a href="https://share.google/Yy7kmquYp72K2r7OA" target="_blank" rel="noopener noreferrer"
+                  class="footer__adress-container">
 
-                  8558 Green Rd., LA
+                  <img src="./assets/isons/footer/adress.svg" alt="adress icon" />
+                  <p>
 
+                    8558 Green Rd., LA
+
+                  </p>
                 </a>
 
-              </li>
+                <span class="footer__adress-line"></span>
 
-              <li class="footer__adress-item">
-
-                <img src="./assets/isons/footer/phone.svg" alt="phone icon" />
-                <a href="tel:+1 (603) 555-0123" target="_blank" rel="noopener noreferrer" >
-
-                  +1 (603) 555-0123
-                </a>
 
               </li>
 
 
               <li class="footer__adress-item">
 
-                <img src="./assets/isons/footer/clock.svg" alt="clock icon" />
-                <a href="#" target="_blank" rel="noopener noreferrer" >
+                <a href="tel:+1 (603) 555-0123" target="_blank" rel="noopener noreferrer"
+                  class="footer__adress-container">
 
-                  Mon–Sat: 9:00–23:00
+                  <img src="./assets/isons/footer/phone.svg" alt="phone icon" />
+                  <p>
+
+                    +1 (603) 555-0123
+
+                  </p>
                 </a>
 
+                <span class="footer__adress-line"></span>
+
+
               </li>
+
+              <li class="footer__adress-item">
+
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer__adress-container">
+
+                  <img src="./assets/isons/footer/clock.svg" alt="clock icon" />
+                  <p>
+
+                    Mon–Sat: 9:00–23:00
+
+                  </p>
+                </a>
+
+                <span class="footer__adress-line"></span>
+
+
+              </li>
+
+
+
+
+
 
             </ul>
 

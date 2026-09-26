@@ -50,11 +50,42 @@
       display: flex;
       flex-direction: row;
       gap: 0.5rem;
+      background-color: transparent;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--bg-container);
+
+        .app__text-apple {
+          background-image: url("../../assets/isons/app-section/apple-store_icon-hover.svg");
+        }
+
+        .app__text-google {
+          background-image: url("../../assets/isons/app-section/google-store_icon_hover.svg");
+        }
+
+        .app__text-container {
+          color: var(--text-inverse);
+        }
+      }
     }
 
     &-icon {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
       width: 2.25rem;
       height: 2.25rem;
+      background-size: contain;
+      transition: background-image 0.3s;
+    }
+
+    &-apple {
+      background-image: url(../../assets/isons/app-section/apple-store_icon.svg);
+    }
+
+    &-google {
+      background-image: url(../../assets/isons/app-section/google-store_icon.svg);
     }
 
     &-container {
@@ -63,20 +94,20 @@
       gap: 0.125rem;
       align-items: flex-start;
       justify-content: center;
+      color: var(--text-primary);
+      transition: color 0.3s;
 
       p {
         font-weight: 600;
         font-size: 0.625rem;
         line-height: 140%;
         text-align: center;
-        color: var(--text-primary);
       }
 
       h4 {
         font-weight: 600;
         font-size: 1rem;
         line-height: 150%;
-        color: var(--text-primary);
       }
     }
   }

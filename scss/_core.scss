@@ -44,3 +44,22 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+
+@media (max-width: 1140px) {
+  html {
+    font-size: 90%; 
+  }
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 80%; 
+  }
+}
+
+@media (max-width: 840px) {
+  html {
+    font-size: 70%; 
+  }
+}
+
