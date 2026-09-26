@@ -41,7 +41,7 @@
       color: var(--text-primary);
       text-decoration: none;
 
-      &:hover {
+      @include hover-desktop {
         .header__nav-line {
           width: 100%;
         }
@@ -100,7 +100,7 @@
     justify-content: center;
     gap: 0.25rem;
 
-    &:hover {
+    @include hover-desktop {
       .header__button-line {
         width: 100%;
       }
@@ -152,7 +152,7 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 1.25rem 0;
+    padding: 1.25rem 0 0.625rem 0;
 
     &__container {
       justify-content: space-between;
