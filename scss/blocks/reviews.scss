@@ -43,18 +43,17 @@
 @media (max-width: 768px) {
   .reviews {
     &__images {
-      display: flex;
       flex-direction: column;
       gap: 2.5rem;
 
       &-left {
-        .reviews__customer-img:last-child {
+        > .reviews__customer-img {
           display: none;
         }
       }
 
       &-right {
-        .reviews__customer-img:first-child {
+        > .reviews__customer-img {
           display: none;
         }
       }
@@ -62,6 +61,27 @@
 
     &__customer-img {
       max-width: 43rem;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .reviews {
+    &__container-paragraph {
+      font-size: 2rem;
+      line-height: 125%;
+    }
+
+    &__images {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    &__customer-img {
+      max-width: 21.75rem;
       width: 100%;
       height: auto;
     }

@@ -54,7 +54,8 @@
 
               <picture class=" header__togle-icon">
 
-                 <source media="(max-width: 380px)" srcset="./assets/isons/header-section/header-buttons/light-theme-mobile.svg">
+                <source media="(max-width: 380px)"
+                  srcset="./assets/isons/header-section/header-buttons/light-theme-mobile.svg">
 
                 <img src="./assets/isons/header-section/header-buttons/light-theme.svg" class="header__togle-light" />
               </picture>
@@ -277,8 +278,12 @@
 
             <div class="reviews__images-left">
 
-              <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev1.png"
-                alt="customer photo" />
+              <picture class="reviews__customer-picture">
+                <source media="(max-width: 380px)" srcset="./assets/images/reviewsSection/rewiev1-mobile.png" />
+
+                <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev1.png"
+                  alt="customer photo" />
+              </picture>
 
               <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev2.png"
                 alt="customer photo" />
@@ -290,8 +295,12 @@
               <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev3.png"
                 alt="customer photo" />
 
-              <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev4.png"
-                alt="customer photo" />
+              <picture class="reviews__customer-picture">
+                <source media="(max-width: 380px)" srcset="./assets/images/reviewsSection/rewiev4-mobile.png" />
+
+                <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev4.png"
+                  alt="customer photo" />
+              </picture>
 
             </div>
 
@@ -498,7 +507,7 @@
   <div class="page-overlay js-overlay"></div>
 
   <script src="./js/burger.js"></script>
-  
+
 </body>
 
 </html>
