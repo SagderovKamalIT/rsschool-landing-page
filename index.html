@@ -52,10 +52,12 @@
 
             <button class="header__button">
 
-              <span class=" header__togle-icon">
+              <picture class=" header__togle-icon">
+
+                 <source media="(max-width: 380px)" srcset="./assets/isons/header-section/header-buttons/light-theme-mobile.svg">
 
                 <img src="./assets/isons/header-section/header-buttons/light-theme.svg" class="header__togle-light" />
-              </span>
+              </picture>
 
               <span class="header__togle-icon">
 
@@ -493,8 +495,10 @@
 
   </main>
   </div>
+  <div class="page-overlay js-overlay"></div>
 
   <script src="./js/burger.js"></script>
+  
 </body>
 
 </html>
