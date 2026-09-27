@@ -1,6 +1,8 @@
 .header {
   padding: 1.25rem 0 0.313rem 0;
   position: relative;
+  z-index: 11;
+  background-color: var(--text-inverse);
 
   &__container {
     display: flex;
@@ -144,6 +146,7 @@
 
 .burger {
   display: none;
+  
 
   &__content {
     display: none;
@@ -153,6 +156,7 @@
 @media (max-width: 768px) {
   .header {
     padding: 1.25rem 0 0.625rem 0;
+     z-index: 11;
 
     &__container {
       justify-content: space-between;
@@ -257,9 +261,9 @@
   .burger {
     display: none;
     position: absolute;
-    top: 6.4rem;
+     top: 100%;
     left: 0;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     padding: 5rem 2.5rem;
     background-color: var(--text-inverse);
@@ -306,3 +310,42 @@
     }
   }
 }
+
+
+@media (max-width: 380px) {
+  .header {
+
+
+    &__buttons-container {
+      gap: 0.75rem;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    &__togle-icon {
+      width: 2.75rem;
+      height: 2.5rem;
+      border-radius: 6.25rem;
+    }
+
+    &__togle-light {
+      width: 2.75rem;
+      height: 2.5rem;
+    }
+
+  }
+
+  .burger {
+    padding: 3.75rem 1rem;
+
+    &--active {
+      display: block;
+    }
+
+  }
+}
+
