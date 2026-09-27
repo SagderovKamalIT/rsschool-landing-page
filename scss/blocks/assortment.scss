@@ -163,3 +163,39 @@
     }
   }
 }
+
+
+@media (max-width: 380px) {
+
+  .assortment {
+
+    &__container-title {
+      font-size: 2rem;
+      line-height: 125%;
+    }
+
+    
+    &__main {
+      padding: 0;
+  
+      &-container {
+        font-size: 3.75rem;
+        line-height: 125%;
+        text-align: center;
+        color: var(--text-primary);
+  
+    
+          img {
+            max-width: 21.75rem;
+            width: 100%;
+            height: auto;
+          }
+        
+      }
+  }
+
+    .assortment__toggle {
+      display: none;
+    }
+  }
+}
