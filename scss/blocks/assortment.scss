@@ -137,3 +137,29 @@
     background-color: var(--border-primary);
   }
 }
+
+@media (max-width: 768px) {
+  .assortment__main {
+    padding: 0 6.25rem;
+
+    &-container {
+      font-size: 3.75rem;
+      line-height: 125%;
+      text-align: center;
+      color: var(--text-primary);
+
+      span {
+        img {
+          max-width: 30rem;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .assortment__toggle {
+      left: 0;
+      right: 0;
+    }
+  }
+}
