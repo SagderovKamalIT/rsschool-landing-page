@@ -1,20 +1,20 @@
 const coffeeData = [
   {
-    image: "./assets/images/assortmentSection/coffee-slider-1.png",
+    image: "assortmentSection/coffee-slider-1.png",
     title: "S’mores Frappuccino",
     description:
       "This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.",
     price: "$5.50",
   },
   {
-    image: "./assets/images/assortmentSection/coffee-slider-2.png",
+    image: "assortmentSection/coffee-slider-2.png",
     title: "Caramel Macchiato",
     description:
       "Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.",
     price: "$5.00",
   },
   {
-    image: "./assets/images/assortmentSection/coffee-slider-3.png",
+    image: "assortmentSection/coffee-slider-3.png",
     title: "Ice coffee",
     description:
       "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.",
