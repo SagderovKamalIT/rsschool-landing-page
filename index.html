@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/isons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./assets/isons/favicon.svg" type="image/svg+xml" />
     <title>Coffee House</title>
     <link rel="stylesheet" href="./scss/main.scss" />
   </head>
@@ -226,19 +226,20 @@
               <div class="assortment__main">
                 <div class="assortment__main-container">
                   <img
+                    id="slider-img"
                     src="./assets/images/assortmentSection/coffee-slider-1.png"
                     alt="coffee_assortment"
                   />
 
                   <div class="assortment__main-text">
-                    <h3>S’mores Frappuccino</h3>
+                    <h3 id="slider-title">S’mores Frappuccino</h3>
 
-                    <p>
+                    <p id="slider-description">
                       This new drink takes an espresso and mixes it with brown
                       sugar and cinnamon before being topped with oat milk.
                     </p>
 
-                    <h4>$5.50</h4>
+                    <h4 id="slider-price">$5.50</h4>
                   </div>
                 </div>
 
@@ -481,8 +482,11 @@
     </div>
     <div class="page-overlay js-overlay"></div>
 
-    <script src="./js/theme.js"></script>
+    <script type="module" src="./js/theme.js"></script>
 
-    <script src="./js/burger.js"></script>
+    <script type="module" src="./js/burger.js"></script>
+
+    <script type="module" src="./js/slider.js"></script>
+    <a href="./menu-coffee.html" style="display: none">Vite link anchor</a>
   </body>
 </html>

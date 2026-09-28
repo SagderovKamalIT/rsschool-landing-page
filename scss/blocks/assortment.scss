@@ -87,8 +87,12 @@
         background-color 0.3s,
         background-image 0.3s;
 
-      &:hover {
+      @include hover-desktop {
         background-color: var(--bg-container);
+      }
+
+      &:active {
+        background-color: transparent;
       }
     }
 
@@ -98,7 +102,7 @@
       background-position: center;
       background-size: 1.5rem;
 
-      &:hover {
+      @include hover-desktop {
         background-image: url("../../assets/isons/assortment-section/arrow-left_hover.svg");
       }
     }
@@ -109,7 +113,7 @@
       background-position: center;
       background-size: 1.5rem;
 
-      &:hover {
+      @include hover-desktop {
         background-image: url("../../assets/isons/assortment-section/arrow-right_hover.svg");
       }
     }
@@ -130,11 +134,13 @@
   &__progress-chousen {
     border-radius: 6.25rem;
     background-color: var(--bg-container);
+    transition: background-color 0.3s ease;
   }
 
   &__progress-next {
     border-radius: 6.25rem;
     background-color: var(--border-primary);
+    transition: background-color 0.3s ease;
   }
 }
 
@@ -164,35 +170,29 @@
   }
 }
 
-
 @media (max-width: 380px) {
-
   .assortment {
-
     &__container-title {
       font-size: 2rem;
       line-height: 125%;
     }
 
-    
     &__main {
       padding: 0;
-  
+
       &-container {
         font-size: 3.75rem;
         line-height: 125%;
         text-align: center;
         color: var(--text-primary);
-  
-    
-          img {
-            max-width: 21.75rem;
-            width: 100%;
-            height: auto;
-          }
-        
+
+        img {
+          max-width: 21.75rem;
+          width: 100%;
+          height: auto;
+        }
       }
-  }
+    }
 
     .assortment__toggle {
       display: none;
