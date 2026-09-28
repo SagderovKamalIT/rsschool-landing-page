@@ -22,6 +22,7 @@ body {
 
   &.menu-open {
     overflow: hidden;
+    height: 100vh; 
     &::after {
       opacity: 1;
       pointer-events: auto;
