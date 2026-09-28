@@ -1,513 +1,487 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="./scss/main.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coffee House</title>
-  <link rel="stylesheet" href="./scss/main.scss" />
-</head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="wrap">
+          <div class="header__container">
+            <div class="header__logo-container">
+              <a
+                class="header__logo"
+                href="https://www.figma.com/design/yuc5s9NCc4jENkk5LdFfvX/Coffee-House-2026Q3?node-id=0-1&t=8rul1DTtoDgR8Rzj-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  class="header__logo-img"
+                  src="./assets/isons/header-section/logo.svg"
+                  alt="coffee house"
+                />
+              </a>
+            </div>
 
-<body>
-  <div class="container">
-    <header class="header">
-      <div class="wrap">
-        <div class="header__container">
-          <div class="header__logo-container">
+            <div class="header__nav-container">
+              <nav class="header__nav">
+                <a href="#favourite_coffee" class="header__nav-item">
+                  Favorite coffee
+                  <span class="header__nav-line"></span>
+                </a>
 
-            <a class="header__logo"
-              href="https://www.figma.com/design/yuc5s9NCc4jENkk5LdFfvX/Coffee-House-2026Q3?node-id=0-1&t=8rul1DTtoDgR8Rzj-1"
-              target="_blank" rel="noopener noreferrer">
-              <img class="header__logo-img" src="./assets/isons/header-section/logo.svg" alt="coffee house" />
-            </a>
+                <a href="#about" class="header__nav-item">
+                  About
+                  <span class="header__nav-line"></span>
+                </a>
+
+                <a href="#mobile-app" class="header__nav-item">
+                  Mobile app
+                  <span class="header__nav-line"></span>
+                </a>
+
+                <a href="#contact-us" class="header__nav-item">
+                  Contact us
+                  <span class="header__nav-line"></span>
+                </a>
+              </nav>
+            </div>
+
+            <div class="header__buttons-container">
+              <button class="header__button js-theme-button">
+                <span class="header__togle-icon header__togle-chosen">
+                  <img
+                    src="./assets/isons/header-section/header-buttons/light-theme.svg"
+                    class="header__togle-light"
+                  />
+                </span>
+
+                <span class="header__togle-icon">
+                  <img
+                    src="./assets/isons/header-section/header-buttons/dark-theme.svg"
+                    class="header__togle-dark"
+                  />
+                </span>
+              </button>
+
+              <div class="header__button-item">
+                <a
+                  class="header__button-menu"
+                  href="./menu-coffee.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <p>Menu</p>
+                  <img
+                    src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg"
+                    alt="coffee_cup-icon"
+                  />
+                </a>
+
+                <span class="header__button-line"></span>
+              </div>
+
+              <button class="header__burger js-burger">
+                <svg
+                  class="header__burger-icon header__burger-icon--default"
+                  width="18"
+                  height="10"
+                  viewBox="0 0 18 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.75 0.75H16.75"
+                    stroke="#403F3D"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.75 8.75H16.75"
+                    stroke="#403F3D"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+                <svg
+                  class="header__burger-icon header__burger-icon--active"
+                  width="13"
+                  height="13"
+                  viewBox="0 0 13 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.75 0.75L12.0637 12.0637"
+                    stroke="#403F3D"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M0.75 12.0637L12.0637 0.749998"
+                    stroke="#403F3D"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
+        </div>
 
-          <div class="header__nav-container">
-
-            <nav class="header__nav">
-              <a href="#favourite_coffee" class="header__nav-item">
+        <div class="burger">
+          <div class="burger__content">
+            <nav class="burger__nav">
+              <a
+                href="#favourite_coffee"
+                class="burger__nav-item js-burger__nav"
+              >
                 Favorite coffee
                 <span class="header__nav-line"></span>
               </a>
 
-              <a href="#about" class="header__nav-item">
+              <a href="#about" class="burger__nav-item js-burger__nav">
                 About
                 <span class="header__nav-line"></span>
               </a>
 
-              <a href="#mobile-app" class="header__nav-item">
+              <a href="#mobile-app" class="burger__nav-item js-burger__nav">
                 Mobile app
                 <span class="header__nav-line"></span>
               </a>
 
-              <a href="#contact-us" class="header__nav-item">
+              <a href="#contact-us" class="burger__nav-item js-burger__nav">
                 Contact us
                 <span class="header__nav-line"></span>
               </a>
             </nav>
+
+            <a
+              class="burger__button js-burger__nav"
+              href="./menu-coffee.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Menu
+
+              <img
+                class="burger__button-menu"
+                src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg"
+                alt="coffee_cup-icon"
+              />
+            </a>
           </div>
+        </div>
+      </header>
 
+      <main>
+        <section class="main">
+          <div class="wrap">
+            <div class="main__container">
+              <div class="main__content-container">
+                <div class="main__text">
+                  <h1 class="main__text-header">
+                    <span>Enjoy </span> premium coffee at our charming cafe
+                  </h1>
 
-          <div class="header__buttons-container">
+                  <p class="main__text-paragraph">
+                    With its inviting atmosphere and delicious coffee options,
+                    the Coffee House Resource is a popular destination for
+                    coffee lovers and those seeking a warm and inviting space to
+                    enjoy their favorite beverage.
+                  </p>
 
-            <button class="header__button js-theme-button">
-              <span class="header__togle-icon header__togle-chosen">
-                <img src="./assets/isons/header-section/header-buttons/light-theme.svg" class="header__togle-light" />
-              </span>
-
-              <span class="header__togle-icon">
-                <img src="./assets/isons/header-section/header-buttons/dark-theme.svg" class="header__togle-dark" />
-              </span>
-            </button>
-
-            <div class="header__button-item">
-
-              <a class="header__button-menu" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
-
-                <p>
-
-                  Menu
-
-                </p>
-                <img src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg" alt="coffee_cup-icon" />
-              </a>
-
-              <span class="header__button-line"></span>
-
+                  <a
+                    class="main__text-button"
+                    href="./menu-coffee.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Menu
+                    <span> </span>
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <button class="header__burger js-burger">
-
-              <svg class="header__burger-icon  header__burger-icon--default" width="18" height="10" viewBox="0 0 18 10"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.75 0.75H16.75" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M0.75 8.75H16.75" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-
-              <svg class="header__burger-icon  header__burger-icon--active" width="13" height="13" viewBox="0 0 13 13"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.75 0.75L12.0637 12.0637" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M0.75 12.0637L12.0637 0.749998" stroke="#403F3D" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-
-            </button>
-
-
-
-
           </div>
+        </section>
 
+        <section class="assortment" id="favourite_coffee">
+          <div class="wrap">
+            <div class="assortment__container">
+              <h2 class="assortment__container-title">
+                Choose your <span>favorite</span> coffee
+              </h2>
 
+              <div class="assortment__main">
+                <div class="assortment__main-container">
+                  <img
+                    src="./assets/images/assortmentSection/coffee-slider-1.png"
+                    alt="coffee_assortment"
+                  />
 
-        </div>
-      </div>
+                  <div class="assortment__main-text">
+                    <h3>S’mores Frappuccino</h3>
 
+                    <p>
+                      This new drink takes an espresso and mixes it with brown
+                      sugar and cinnamon before being topped with oat milk.
+                    </p>
 
-      <div class="burger">
+                    <h4>$5.50</h4>
+                  </div>
+                </div>
 
-        <div class="burger__content">
+                <div class="assortment__toggle">
+                  <button
+                    class="assortment__toggle-button assortment__toggle-left"
+                  ></button>
 
-          <nav class="burger__nav">
-
-            <a href="#favourite_coffee" class="burger__nav-item  js-burger__nav ">
-              Favorite coffee
-              <span class="header__nav-line"></span>
-            </a>
-
-            <a href="#about" class="burger__nav-item  js-burger__nav">
-              About
-              <span class="header__nav-line"></span>
-            </a>
-
-            <a href="#mobile-app" class="burger__nav-item  js-burger__nav">
-              Mobile app
-              <span class="header__nav-line"></span>
-            </a>
-
-            <a href="#contact-us" class="burger__nav-item  js-burger__nav">
-              Contact us
-              <span class="header__nav-line"></span>
-            </a>
-
-          </nav>
-
-          <a class="burger__button js-burger__nav" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
-
-
-            Menu
-
-            <img class="burger__button-menu" src="./assets/isons/header-section/header-buttons/menu__coffee-cup.svg"
-              alt="coffee_cup-icon" />
-          </a>
-
-        </div>
-      </div>
-
-      
-
-  </header>
-
-  <main>
-
-    <section class="main">
-
-      <div class="wrap">
-
-        <div class="main__container">
-
-          <div class="main__content-container">
-
-            <div class="main__text">
-
-              <h1 class="main__text-header">
-                <span>Enjoy </span> premium coffee at our charming cafe
-              </h1>
-
-              <p class="main__text-paragraph">
-                With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular
-                destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite
-                beverage.
-              </p>
-
-              <a class="main__text-button" href="./menu-coffee.html" target="_blank" rel="noopener noreferrer">
-                Menu
-                <span>
-                </span>
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="assortment" id="favourite_coffee">
-
-      <div class="wrap">
-
-        <div class="assortment__container">
-
-          <h2 class="assortment__container-title">
-            Choose your <span>favorite</span> coffee
-          </h2>
-
-          <div class="assortment__main">
-
-
-            <div class="assortment__main-container">
-
-
-              <img src="./assets/images/assortmentSection/coffee-slider-1.png" alt="coffee_assortment" />
-
-              <div class="assortment__main-text">
-
-                <h3>
-                  S’mores Frappuccino
-                </h3>
-
-                <p>
-                  This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with
-                  oat milk.
-                </p>
-
-                <h4>
-                  $5.50
-                </h4>
-
+                  <button
+                    class="assortment__toggle-button assortment__toggle-right"
+                  ></button>
+                </div>
               </div>
 
+              <div class="assortment__progress-bar">
+                <span
+                  class="assortment__progress-item assortment__progress-chousen"
+                ></span>
+
+                <span
+                  class="assortment__progress-item assortment__progress-next"
+                ></span>
+
+                <span
+                  class="assortment__progress-item assortment__progress-next"
+                ></span>
+              </div>
             </div>
-
-            <div class="assortment__toggle">
-
-              <button class="assortment__toggle-button assortment__toggle-left">
-
-              </button>
-
-              <button class="assortment__toggle-button  assortment__toggle-right">
-
-              </button>
-
-            </div>
-
           </div>
+        </section>
 
-          <div class="assortment__progress-bar">
+        <section class="reviews" id="about">
+          <div class="wrap">
+            <div class="reviews__container">
+              <p class="reviews__container-paragraph">
+                Resource is <span>the perfect and cozy place </span>where you
+                can enjoy a variety of hot beverages, relax, catch up with
+                friends, or get some work done.
+              </p>
 
-            <span class="assortment__progress-item assortment__progress-chousen"></span>
+              <div class="reviews__images">
+                <div class="reviews__images-left">
+                  <picture class="reviews__customer-picture">
+                    <source
+                      media="(max-width: 380px)"
+                      srcset="./assets/images/reviewsSection/rewiev1-mobile.png"
+                    />
 
-            <span class="assortment__progress-item  assortment__progress-next"></span>
+                    <img
+                      class="reviews__customer-img"
+                      src="./assets/images/reviewsSection/rewiev1.png"
+                      alt="customer photo"
+                    />
+                  </picture>
 
-            <span class="assortment__progress-item  assortment__progress-next"></span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section class="reviews" id="about">
-
-      <div class="wrap">
-
-        <div class="reviews__container">
-
-          <p class="reviews__container-paragraph">
-            Resource is <span>the perfect and cozy place </span>where you can enjoy a variety of hot beverages, relax,
-            catch up with friends, or get some work done.
-          </p>
-
-
-          <div class="reviews__images">
-
-            <div class="reviews__images-left">
-
-              <picture class="reviews__customer-picture">
-                <source media="(max-width: 380px)" srcset="./assets/images/reviewsSection/rewiev1-mobile.png" />
-
-                <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev1.png"
-                  alt="customer photo" />
-              </picture>
-
-              <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev2.png"
-                alt="customer photo" />
-
-            </div>
-
-            <div class="reviews__images-right">
-
-              <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev3.png"
-                alt="customer photo" />
-
-              <picture class="reviews__customer-picture">
-                <source media="(max-width: 380px)" srcset="./assets/images/reviewsSection/rewiev4-mobile.png" />
-
-                <img class="reviews__customer-img" src="./assets/images/reviewsSection/rewiev4.png"
-                  alt="customer photo" />
-              </picture>
-
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="app" id="mobile-app">
-      <div class="wrap">
-
-        <div class="app__container">
-
-          <div class="app__text">
-
-            <h2 class="app__text-header">
-              <span>Download</span> our app
-              to start ordering
-            </h2>
-
-            <p class="app__text-paragraph">Download the Resource app today and experience the comfort of ordering your
-              favorite coffee from wherever you are</p>
-
-            <div class="app__text-buttons">
-
-              <a class="app__text-button" href="https://www.apple.com/app-store/" target="_blank"
-                rel="noopener noreferrer">
-
-                <span class="app__text-icon app__text-apple"></span>
-
-                <div class="app__text-container">
-
-                  <p>
-                    Available on the
-                  </p>
-
-                  <h4>
-                    App Store
-                  </h4>
-
+                  <img
+                    class="reviews__customer-img"
+                    src="./assets/images/reviewsSection/rewiev2.png"
+                    alt="customer photo"
+                  />
                 </div>
 
-              </a>
+                <div class="reviews__images-right">
+                  <img
+                    class="reviews__customer-img"
+                    src="./assets/images/reviewsSection/rewiev3.png"
+                    alt="customer photo"
+                  />
 
-              <a class="app__text-button" href="https://play.google.com/store/apps?hl=ru&pli=1" target="_blank"
-                rel="noopener noreferrer">
+                  <picture class="reviews__customer-picture">
+                    <source
+                      media="(max-width: 380px)"
+                      srcset="./assets/images/reviewsSection/rewiev4-mobile.png"
+                    />
 
-                <span class="app__text-icon app__text-google"> </span>
-
-                <div class="app__text-container">
-
-                  <p>
-                    Available on the
-                  </p>
-
-                  <h4>
-                    Google Play
-                  </h4>
-
+                    <img
+                      class="reviews__customer-img"
+                      src="./assets/images/reviewsSection/rewiev4.png"
+                      alt="customer photo"
+                    />
+                  </picture>
                 </div>
-
-              </a>
-
+              </div>
             </div>
-
-
-
           </div>
+        </section>
 
-          <div class="app__image">
+        <section class="app" id="mobile-app">
+          <div class="wrap">
+            <div class="app__container">
+              <div class="app__text">
+                <h2 class="app__text-header">
+                  <span>Download</span> our app to start ordering
+                </h2>
 
-            <img class="app__image-picture" src="./assets/images/appSection/mobile-screens.png" alt="mobile screens" />
+                <p class="app__text-paragraph">
+                  Download the Resource app today and experience the comfort of
+                  ordering your favorite coffee from wherever you are
+                </p>
 
+                <div class="app__text-buttons">
+                  <a
+                    class="app__text-button"
+                    href="https://www.apple.com/app-store/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="app__text-icon app__text-apple"></span>
+
+                    <div class="app__text-container">
+                      <p>Available on the</p>
+
+                      <h4>App Store</h4>
+                    </div>
+                  </a>
+
+                  <a
+                    class="app__text-button"
+                    href="https://play.google.com/store/apps?hl=ru&pli=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="app__text-icon app__text-google"> </span>
+
+                    <div class="app__text-container">
+                      <p>Available on the</p>
+
+                      <h4>Google Play</h4>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="app__image">
+                <img
+                  class="app__image-picture"
+                  src="./assets/images/appSection/mobile-screens.png"
+                  alt="mobile screens"
+                />
+              </div>
+            </div>
           </div>
-
-
-
-        </div>
-
-      </div>
-    </section>
-
-
-
-  </main>
+        </section>
+      </main>
 
       <footer class="footer" id="contact-us">
+        <div class="wrap">
+          <div class="footer__container">
+            <div class="footer__link">
+              <h2 class="footer__link-title">
+                Sip, Savor, Smile. <span>It’s coffee time!</span>
+              </h2>
 
-      <div class="wrap">
+              <div class="footer__link-container">
+                <a
+                  href="#"
+                  class="footer__link-icon footer__link-twiter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                </a>
 
-        <div class="footer__container">
+                <a
+                  href="#"
+                  class="footer__link-icon footer__link-instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                </a>
 
-          <div class="footer__link">
-
-            <h2 class="footer__link-title">
-              Sip, Savor, Smile. <span>It’s coffee time!</span>
-            </h2>
-
-            <div class="footer__link-container">
-
-              <a href="#" class="footer__link-icon footer__link-twiter" target="_blank" rel="noopener noreferrer">
-
-
-
-              </a>
-
-              <a href="#" class="footer__link-icon footer__link-instagram" target="_blank" rel="noopener noreferrer">
-
-
-              </a>
-
-              <a href="#" class="footer__link-icon footer__link-facebook" target="_blank" rel="noopener noreferrer">
-
-
-
-              </a>
-
-
-
-
+                <a
+                  href="#"
+                  class="footer__link-icon footer__link-facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                </a>
+              </div>
             </div>
 
+            <div class="footer__adress">
+              <h3 class="footer__adress-header">Contact us</h3>
 
+              <ul class="footer__adress-list">
+                <li class="footer__adress-item">
+                  <a
+                    href="https://share.google/Yy7kmquYp72K2r7OA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__adress-container"
+                  >
+                    <img
+                      src="./assets/isons/footer/adress.svg"
+                      alt="adress icon"
+                    />
+                    <p>8558 Green Rd., LA</p>
+                  </a>
 
+                  <span class="footer__adress-line"></span>
+                </li>
+
+                <li class="footer__adress-item">
+                  <a
+                    href="tel:+1 (603) 555-0123"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__adress-container"
+                  >
+                    <img
+                      src="./assets/isons/footer/phone.svg"
+                      alt="phone icon"
+                    />
+                    <p>+1 (603) 555-0123</p>
+                  </a>
+
+                  <span class="footer__adress-line"></span>
+                </li>
+
+                <li class="footer__adress-item">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer__adress-container"
+                  >
+                    <img
+                      src="./assets/isons/footer/clock.svg"
+                      alt="clock icon"
+                    />
+                    <p>Mon–Sat: 9:00–23:00</p>
+                  </a>
+
+                  <span class="footer__adress-line"></span>
+                </li>
+              </ul>
+            </div>
           </div>
-
-          <div class="footer__adress">
-
-            <h3 class="footer__adress-header">Contact us</h3>
-
-            <ul class="footer__adress-list">
-
-              <li class="footer__adress-item">
-
-                <a href="https://share.google/Yy7kmquYp72K2r7OA" target="_blank" rel="noopener noreferrer"
-                  class="footer__adress-container">
-
-                  <img src="./assets/isons/footer/adress.svg" alt="adress icon" />
-                  <p>
-
-                    8558 Green Rd., LA
-
-                  </p>
-                </a>
-
-                <span class="footer__adress-line"></span>
-
-
-              </li>
-
-
-              <li class="footer__adress-item">
-
-                <a href="tel:+1 (603) 555-0123" target="_blank" rel="noopener noreferrer"
-                  class="footer__adress-container">
-
-                  <img src="./assets/isons/footer/phone.svg" alt="phone icon" />
-                  <p>
-
-                    +1 (603) 555-0123
-
-                  </p>
-                </a>
-
-                <span class="footer__adress-line"></span>
-
-
-              </li>
-
-              <li class="footer__adress-item">
-
-                <a href="#" target="_blank" rel="noopener noreferrer" class="footer__adress-container">
-
-                  <img src="./assets/isons/footer/clock.svg" alt="clock icon" />
-                  <p>
-
-                    Mon–Sat: 9:00–23:00
-
-                  </p>
-                </a>
-
-                <span class="footer__adress-line"></span>
-
-
-              </li>
-
-
-
-
-
-
-            </ul>
-
-
-
-          </div>
-
         </div>
+      </footer>
+    </div>
+    <div class="page-overlay js-overlay"></div>
 
-      </div>
+    <script src="./js/theme.js"></script>
 
-    </footer>
-  </div>
-  <div class="page-overlay js-overlay"></div>
-
-
-  <script src="./js/theme.js"></script>
-
-  <script src="./js/burger.js"></script>
-
-</body>
-
+    <script src="./js/burger.js"></script>
+  </body>
 </html>
