@@ -204,22 +204,24 @@
 
       &-button {
         display: flex;
+        align-items: center;
+        justify-content: center;
         border: 0.063rem solid var(--bg-container);
         border-radius: 6.25rem;
         width: 3.75rem;
         height: 3.75rem;
-        display: flex;
-        align-items: center;
         margin: 0 auto;
         background-color: transparent;
-        transition:
-          background-color 0.3s,
-          background-image 0.3s;
+        transition: background-color 0.3s ease;
 
-        background-image: url(../../assets/isons/menu-section/refresh.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 1.5rem;
+        svg {
+          border-radius: 0px;
+          stroke-width: 0.063rem;
+          stroke: var(--text-primary);
+          opacity: 1;
+
+          transform: scale(1) rotate(0deg);
+        }
       }
     }
   }
