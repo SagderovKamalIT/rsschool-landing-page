@@ -45,7 +45,7 @@
     &-button {
       border-radius: 6.25rem;
       padding: 1.25rem 0;
-      background: var(--text-inverse);
+      background: var(--bg-page);
       max-width: 12.5rem;
       width: 100%;
       font-weight: 600;
@@ -72,7 +72,7 @@
       @include hover-desktop {
         gap: 0.5rem;
 
-        background: var(--text-inverse);
+        background: var(--bg-page);
 
         span {
           opacity: 1;
@@ -103,14 +103,12 @@
       &-button {
         border-radius: 6.25rem;
         padding: 1.25rem 0;
-        background: var(--text-inverse);
         max-width: 12.5rem;
         width: 100%;
         font-weight: 600;
         font-size: 1rem;
         line-height: 150%;
         text-align: center;
-        color: var(--text-primary);
 
         display: flex;
         flex-direction: row;

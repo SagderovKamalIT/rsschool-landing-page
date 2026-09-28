@@ -50,21 +50,14 @@
 
           <div class="header__buttons-container">
 
-            <button class="header__button">
-
-              <picture class=" header__togle-icon">
-
-                <source media="(max-width: 380px)"
-                  srcset="./assets/isons/header-section/header-buttons/light-theme-mobile.svg">
-
+            <button class="header__button js-theme-button">
+              <span class="header__togle-icon header__togle-chosen">
                 <img src="./assets/isons/header-section/header-buttons/light-theme.svg" class="header__togle-light" />
-              </picture>
-
-              <span class="header__togle-icon">
-
-                <img src="./assets/isons/header-section/header-buttons/dark-theme.svg" class="header__togle-dark" />
               </span>
 
+              <span class="header__togle-icon">
+                <img src="./assets/isons/header-section/header-buttons/dark-theme.svg" class="header__togle-dark" />
+              </span>
             </button>
 
             <div class="header__button-item">
@@ -505,6 +498,8 @@
   </main>
   </div>
   <div class="page-overlay js-overlay"></div>
+
+  <script src="./js/theme.js"></script>
 
   <script src="./js/burger.js"></script>
 

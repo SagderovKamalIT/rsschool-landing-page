@@ -2,7 +2,9 @@ body {
   --font-family: "Inter", sans-serif;
   --second-family: "Manrope", sans-serif;
   background: var(--text-inverse);
+  background: var(--bg-page);
   position: relative;
+
 
   &::after {
     content: "";

@@ -2,7 +2,7 @@
   padding: 1.25rem 0 0.313rem 0;
   position: relative;
   z-index: 11;
-  background-color: var(--text-inverse);
+  background-color: var(--bg-page);
 
   &__container {
     display: flex;
@@ -83,16 +83,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
   }
 
   &__togle-light {
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 1.125rem;
+    height: 1.125rem;
   }
 
   &__togle-dark {
     width: 1.125rem;
     height: 1.125rem;
+  }
+
+  &__togle-chosen {
+    background: var(--text-accent);
   }
 
   &__button-item {
@@ -146,7 +151,6 @@
 
 .burger {
   display: none;
-  
 
   &__content {
     display: none;
@@ -156,7 +160,7 @@
 @media (max-width: 768px) {
   .header {
     padding: 1.25rem 0 0.625rem 0;
-     z-index: 11;
+    z-index: 11;
 
     &__container {
       justify-content: space-between;
@@ -198,12 +202,8 @@
       border-radius: 6.25rem;
     }
 
+    &__togle-dark,
     &__togle-light {
-      width: 2.75rem;
-      height: 2.75rem;
-    }
-
-    &__togle-dark {
       width: 1.125rem;
       height: 1.125rem;
     }
@@ -261,12 +261,12 @@
   .burger {
     display: none;
     position: absolute;
-     top: 100%;
+    top: 100%;
     left: 0;
     z-index: 1;
     width: 100%;
     padding: 5rem 2.5rem;
-    background-color: var(--text-inverse);
+    background-color: var(--bg-page);
 
     &--active {
       display: block;
@@ -311,11 +311,8 @@
   }
 }
 
-
 @media (max-width: 380px) {
   .header {
-
-
     &__buttons-container {
       gap: 0.75rem;
     }
@@ -331,12 +328,6 @@
       height: 2.5rem;
       border-radius: 6.25rem;
     }
-
-    &__togle-light {
-      width: 2.75rem;
-      height: 2.5rem;
-    }
-
   }
 
   .burger {
@@ -345,7 +336,5 @@
     &--active {
       display: block;
     }
-
   }
 }
-

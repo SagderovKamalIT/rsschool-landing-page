@@ -28,6 +28,7 @@ $granite_gray: #665f55;
 
   --border-primary: #{$bone};
   --border-inverse: #{$granite_gray};
+
 }
 
 html.dark-theme {
@@ -41,4 +42,5 @@ html.dark-theme {
 
   --border-primary: #{$taupe};
   --border-inverse: #{$bone};
+
 }
