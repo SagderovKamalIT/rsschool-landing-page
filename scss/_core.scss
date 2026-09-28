@@ -1,0 +1,126 @@
+body {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Manrope", sans-serif;
+  background: var(--text-inverse);
+  background: var(--bg-page);
+  position: relative;
+
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &.menu-open {
+    overflow: hidden;
+    &::after {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+.container {
+  @include min-max(320px, 100%);
+}
+
+.wrap {
+  @include min-max(320px, 1440px);
+  width: 100%;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Inter Display", sans-serif;
+  font-weight: 600;
+}
+
+p,
+span,
+a {
+  font-family: var(--font-family);
+}
+
+a,
+button {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1140px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 840px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 610px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 490px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 100%;
+  }
+
+  .wrap {
+    @include min-max(320px, 1440px);
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}

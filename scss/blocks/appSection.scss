@@ -1,0 +1,164 @@
+@use "../../scss/mixins" as *;
+
+.app {
+  padding: 3.125rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.125rem;
+    align-items: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: left;
+    padding: 9rem 0;
+
+    &-header {
+      font-weight: 600;
+      font-size: 3.75rem;
+      line-height: 125%;
+      color: var(--text-primary);
+
+      span {
+        color: var(--text-accent);
+
+        font-style: italic;
+      }
+    }
+
+    &-paragraph {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 150%;
+      color: var(--text-primary);
+    }
+
+    &-buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 1.25rem;
+    }
+
+    &-button {
+      border: 0.063rem solid var(--bg-container);
+      border-radius: 6.25rem;
+      max-width: 12.5rem;
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      background-color: transparent;
+      transition: background-color 0.3s;
+
+       @include hover-desktop {
+        background-color: var(--bg-container);
+
+        .app__text-apple {
+          background-image: url("../../assets/isons/app-section/apple-store_icon-hover.svg");
+        }
+
+        .app__text-google {
+          background-image: url("../../assets/isons/app-section/google-store_icon_hover.svg");
+        }
+
+        .app__text-container {
+          color: var(--text-inverse);
+        }
+      }
+    }
+
+    &-icon {
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      background-size: contain;
+      transition: background-image 0.3s;
+    }
+
+    &-apple {
+      background-image: url(../../assets/isons/app-section/apple-store_icon.svg);
+    }
+
+    &-google {
+      background-image: url(../../assets/isons/app-section/google-store_icon.svg);
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.125rem;
+      align-items: flex-start;
+      justify-content: center;
+      color: var(--text-primary);
+      transition: color 0.3s;
+
+      p {
+        font-weight: 600;
+        font-size: 0.625rem;
+        line-height: 140%;
+        text-align: center;
+      }
+
+      h4 {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 150%;
+      }
+    }
+  }
+
+  &__image-picture {
+    max-width: 39.375rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .app {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 6.25rem;
+    align-items: center;
+  }
+  
+
+  &__text {
+    padding: 0;
+
+  }
+}
+}
+
+@media (max-width:  380px) {
+  .app {
+
+  &__container {
+    gap: 2.5rem;
+  }
+
+  &__text {
+     
+    &-header {
+      font-size: 2rem;
+      line-height: 125%;
+    }
+
+    &-buttons{
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+  }
+
+}
+}

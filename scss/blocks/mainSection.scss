@@ -1,0 +1,155 @@
+.main {
+  padding: 0.625rem 0 3.125rem 0;
+
+  &__container {
+    border-radius: 2.5rem;
+    background-image: url(../../assets/images/mainSection/img-hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 85rem;
+    height: auto;
+    aspect-ratio: 85 / 40.25;
+  }
+
+  &__content-container {
+    padding: 6.25rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 33.125rem;
+
+    &-header {
+      color: var(--text-inverse);
+      font-weight: 600;
+      font-size: 4.5rem;
+      line-height: 105%;
+
+      span {
+        font-style: italic;
+        color: var(--text-accent);
+      }
+    }
+
+    &-paragraph {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 150%;
+      color: var(--text-inverse);
+    }
+
+    &-button {
+      border-radius: 6.25rem;
+      padding: 1.25rem 0;
+      background: var(--bg-page);
+      max-width: 12.5rem;
+      width: 100%;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 150%;
+      text-align: center;
+      color: var(--text-primary);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      transition: gap 0.3s ease;
+
+      span {
+        background-image: url(../../assets/isons/main-section/coffee-cup.svg);
+        background-size: cover;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        opacity: 0;
+        max-width: 0;
+      }
+
+      @include hover-desktop {
+        gap: 0.5rem;
+
+        background: var(--bg-page);
+
+        span {
+          opacity: 1;
+          max-width: 1.25rem;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 0.625rem 0 3.125rem 0;
+
+    &__container {
+      width: 100%;
+      max-width: 43rem;
+      height: auto;
+      aspect-ratio: 43 / 40.25;
+    }
+
+    &__content-container {
+      padding: 6.25rem 3.75rem;
+    }
+
+    &__text {
+      &-button {
+        border-radius: 6.25rem;
+        padding: 1.25rem 0;
+        max-width: 12.5rem;
+        width: 100%;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 150%;
+        text-align: center;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        span {
+          background-image: url(../../assets/isons/main-section/coffee-cup.svg);
+          background-size: cover;
+          max-width: 1.25rem;
+
+          width: 100%;
+          height: 1.25rem;
+
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .main {
+    &__container {
+      width: 100%;
+      max-width: 21.75rem;
+      height: auto;
+      aspect-ratio: 21.75 / 34.5;
+    }
+
+    &__content-container {
+      padding: 3.75rem 1.125rem;
+    }
+
+    &__text {
+      &-header {
+        font-size: 2.625rem;
+        line-height: 115%;
+      }
+    }
+  }
+}

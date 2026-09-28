@@ -1,0 +1,340 @@
+.header {
+  padding: 1.25rem 0 0.625rem 0;
+  position: relative;
+  z-index: 11;
+  background-color: var(--bg-page);
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__logo-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__nav-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__logo-img {
+    width: 6.25rem;
+    height: auto;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+
+    &-item {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 150%;
+      color: var(--text-primary);
+      text-decoration: none;
+
+      @include hover-desktop {
+        .header__nav-line {
+          width: 100%;
+        }
+      }
+    }
+
+    &-line {
+      display: block;
+      width: 0;
+      height: 0.125rem;
+      background-color: var(--text-primary);
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+  &__buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    background: none;
+    border: 0.063rem solid var(--border-primary);
+    border-radius: 6.25rem;
+    padding: 0.25rem;
+  }
+
+  &__togle-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  &__togle-light {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  &__togle-dark {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  &__togle-chosen {
+    background: var(--text-accent);
+  }
+
+  &__button-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.25rem;
+
+    @include hover-desktop {
+      .header__button-line {
+        width: 100%;
+      }
+    }
+  }
+
+  &__button-line {
+    display: block;
+    width: 0;
+    height: 0.125rem;
+    background-color: var(--text-primary);
+    transition: width 0.3s ease-in-out;
+  }
+
+  &__button-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: max-content;
+    align-items: center;
+
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 150%;
+      color: var(--text-primary);
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+
+  &__content {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.25rem 0 0.625rem 0;
+    z-index: 11;
+
+    &__container {
+      justify-content: space-between;
+    }
+
+    &__logo-container {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &__nav-container {
+      display: none;
+    }
+
+    &__buttons-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      background: none;
+      border: 0.063rem solid var(--border-primary);
+      max-width: 6.5rem;
+      width: 100%;
+      height: auto;
+      border-radius: 6.25rem;
+      padding: 0.313rem 0.188rem;
+    }
+
+    &__togle-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 6.25rem;
+    }
+
+    &__togle-dark,
+    &__togle-light {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+
+    &__button-item {
+      display: none;
+    }
+
+    &__burger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      border: 0.063rem solid var(--bg-container);
+      border-radius: 6.25rem;
+      width: 2.75rem;
+      height: 2.75rem;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+
+        &--default {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        }
+
+        &--active {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.5) rotate(-45deg);
+        }
+      }
+
+      &.is-active {
+        .header__burger-icon--default {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.5) rotate(45deg);
+        }
+
+        .header__burger-icon--active {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 5rem 2.5rem;
+    background-color: var(--bg-page);
+
+    &--active {
+      display: block;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 6.25rem;
+      align-items: center;
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3.75rem;
+
+      &-item {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 125%;
+        text-align: center;
+        color: var(--text-primary);
+      }
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 125%;
+      color: var(--text-primary);
+
+      &-menu {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .header {
+    &__buttons-container {
+      gap: 0.75rem;
+    }
+
+    &__button {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+
+    &__togle-icon {
+      width: 2.75rem;
+      height: 2.5rem;
+      border-radius: 6.25rem;
+    }
+  }
+
+  .burger {
+    padding: 3.75rem 1rem;
+
+    &--active {
+      display: block;
+    }
+  }
+}
