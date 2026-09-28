@@ -1,0 +1,245 @@
+@import "../../scss/mixins";
+
+.menu {
+  padding: 0.625rem 0 3.125rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+
+    &-header {
+      font-weight: 600;
+      width: 50rem;
+      font-size: 3.75rem;
+      line-height: 125%;
+      text-align: center;
+      color: var(--text-primary);
+
+      span {
+        font-style: italic;
+        color: var(--text-accent);
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: fit-content;
+
+    &-link {
+      @include btn(
+        $bg: transparent,
+        $color: var(--text-primary),
+        $font-size: 1rem,
+        $p-top: 0.5rem,
+        $p-right: 1rem,
+        $p-bottom: 0.5rem,
+        $p-left: 0.5rem,
+        $brd: 6.25rem
+      );
+
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      width: fit-content;
+      align-items: center;
+      border: 0.063rem solid var(--border-primary);
+
+      @include hover-desktop {
+        background: var(--bg-container);
+
+        &-icon {
+          background: var(--text-inverse);
+          border: none;
+        }
+
+        .menu__navigation-text {
+          color: var(--text-inverse);
+        }
+      }
+    }
+
+    &-choosenlink {
+      background-color: var(--bg-container);
+      color: var(--text-inverse);
+      border: none;
+    }
+
+    &-icon {
+      background: var(--border-primary);
+      border-radius: 6.25rem;
+      border: 0.063rem solid var(--border-primary);
+      width: 1.875rem;
+      height: 1.875rem;
+      display: flex;
+      align-items: center;
+
+      p {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 150%;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    &-chosenicon {
+      background: var(--text-inverse);
+      border: none;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 150%;
+      color: var(--text-primary);
+    }
+
+    &-chosentext {
+      color: var(--text-inverse);
+    }
+  }
+
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19.375rem, 1fr));
+    width: 100%;
+    gap: 2.5rem;
+
+    &-button {
+      display: none;
+    }
+  }
+
+  &__card {
+    border: 0.063rem solid var(--border-primary);
+    border-radius: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow: hidden;
+
+    &-image {
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 2.5rem;
+      }
+    }
+
+    &-content {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      flex-grow: 1;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex-grow: 1;
+      margin-bottom: 0.75rem;
+
+      h3 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 125%;
+        color: var(--text-primary);
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 150%;
+        color: var(--text-primary);
+      }
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 125%;
+      color: var(--text-primary);
+
+      margin-top: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    &__text {
+      &-header {
+        width: fit-content;
+      }
+    }
+
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+      &-button {
+        display: flex;
+        border: 0.063rem solid var(--bg-container);
+        border-radius: 6.25rem;
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        background-color: transparent;
+        transition:
+          background-color 0.3s,
+          background-image 0.3s;
+
+        background-image: url(../../assets/isons/menu-section/refresh.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .menu {
+    &__text-header {
+      font-size: 2rem;
+      line-height: 125%;
+    }
+
+    &__navigation {
+      gap: max(0.5vw, 0.5rem);
+    }
+
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2.5rem;
+      padding: 0 1.188rem 0 1.188rem;
+    }
+  }
+}
